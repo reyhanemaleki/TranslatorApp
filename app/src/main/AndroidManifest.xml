@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TranslateApp">
         <activity
+            android:name=".Third"
+            android:exported="false" />
+        <activity
             android:name=".Second"
             android:exported="false" />
         <activity
