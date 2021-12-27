@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homebackground"
+    android:background="@drawable/homepage"
     tools:context=".Second">
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constLayout"
@@ -17,12 +19,14 @@
             android:id="@+id/appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Abadis translator"
+            android:layout_marginTop="72dp"
+            android:fontFamily="@font/segoepr"
+            android:text="Welcome to Abadis translate"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="17dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.422"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,15 +34,19 @@
             android:id="@+id/txtLang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="208dp"
             android:layout_marginEnd="55dp"
+            android:fontFamily="@font/segoepr"
             android:gravity="center"
+            android:text="Choose language"
             android:textColor="@color/black"
-            android:text="language"
-            android:textSize="16dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.637"
             app:layout_constraintStart_toStartOf="@+id/appName"
-            app:layout_constraintTop_toBottomOf="@+id/appName" />
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="wrap_content"
@@ -65,22 +73,23 @@
             app:layout_constraintTop_toBottomOf="@+id/txtLang">
 
             <com.skydoves.powerspinner.PowerSpinnerView
+                android:fontFamily="@font/segoepr"
                 android:id="@+id/spinner1"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:background="#981CAE"
+                android:background="#61384259"
                 android:gravity="center"
                 android:hint="From"
                 android:padding="10dp"
                 android:textSize="14.5sp"
                 app:spinner_arrow_gravity="end"
                 app:spinner_arrow_padding="8dp"
-                app:spinner_divider_color="@color/purple_500"
+                app:spinner_divider_color="#FFFFFF"
                 app:spinner_divider_show="true"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 app:spinner_divider_size="0.4dp"
                 app:spinner_popup_animation="dropdown"
-                app:spinner_popup_background="@color/purple_500"
+                app:spinner_popup_background="#727478"
                 app:spinner_popup_elevation="14dp"
                 tools:layout_editor_absoluteX="18dp"
                 tools:layout_editor_absoluteY="151dp" />
@@ -107,22 +116,23 @@
             app:layout_constraintTop_toTopOf="@+id/cardView">
 
             <com.skydoves.powerspinner.PowerSpinnerView
+                android:fontFamily="@font/segoepr"
                 android:id="@+id/spinner2"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:background="#981CAE"
+                android:background="#61384259"
                 android:gravity="center"
                 android:hint="To"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:padding="10dp"
                 android:textSize="14.5sp"
                 app:spinner_arrow_gravity="end"
                 app:spinner_arrow_padding="8dp"
-                app:spinner_divider_color="@color/purple_500"
+                app:spinner_divider_color="#FFFFFF"
                 app:spinner_divider_show="true"
                 app:spinner_divider_size="0.4dp"
                 app:spinner_popup_animation="dropdown"
-                app:spinner_popup_background="@color/purple_500"
+                app:spinner_popup_background="#727478"
                 app:spinner_popup_elevation="14dp"
                 tools:layout_editor_absoluteX="18dp"
                 tools:layout_editor_absoluteY="151dp" />
@@ -135,7 +145,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:padding="20dp"
-            app:cardBackgroundColor="#B86FC5"
+            app:cardBackgroundColor="#384259"
             app:cardCornerRadius="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -143,42 +153,41 @@
 
             <EditText
                 android:id="@+id/edtSearch"
-                android:layout_width="match_parent"
+                android:layout_width="308dp"
                 android:layout_height="54dp"
                 android:layout_marginRight="54dp"
+                android:fontFamily="@font/segoepr"
                 android:hint="Type word to translate..."
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textColor="#fff"
+
+                android:textColorHint="@color/white" />
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:padding="20dp"
-            app:cardBackgroundColor="@color/purple_500"
-            app:cardCornerRadius="18dp"
+
+        <Button
+            android:id="@+id/btnTranslate"
+            android:layout_width="331dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/segoepr"
+            android:text="Translate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.575"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView3">
+            app:layout_constraintTop_toBottomOf="@+id/cardView3"
+            app:layout_constraintVertical_bias="0.004" />
 
-            <Button
-                android:id="@+id/btnTranslate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#D5A9B8"
-                android:text="Translate"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@+id/cardView3" />
-
-        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
